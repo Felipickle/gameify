@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Soundboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+    --accent: #009275;
+    --accent-dark: #00725c;
+    --bg-light: #f7fdfb;
+    --text-main: #2f2f2f;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: linear-gradient(180deg, #ffffff, var(--bg-light));
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 120px 1rem 2rem;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+/* Grid */
+.soundboard {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Card */
+.sound-card {
+    background: #fff;
+    border: 2px solid var(--accent);
+    border-radius: 14px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sound-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(0, 146, 117, 0.25);
+}
+
+/* Play button */
+.play-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.6rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.play-btn:hover {
+    background: var(--accent-dark);
+    transform: scale(1.08);
+}
+
+.play-btn:active {
+    transform: scale(0.95);
+}
+
+/* Label */
+.sound-name {
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+/* Controls */
+.controls {
+    text-align: center;
+    margin-top: 2.5rem;
+}
+
+.controls button {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.controls button:hover {
+    background: var(--accent-dark);
+    transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<h1>Soundboard</h1>
+
+<div class="soundboard">
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s1')">▶</button>
+        <div class="sound-name">Rizz</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s2')">▶</button>
+        <div class="sound-name">Jet2 Holiday</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s3')">▶</button>
+        <div class="sound-name">FBI OPEN UP</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s4')">▶</button>
+        <div class="sound-name">Fahhh</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s5')">▶</button>
+        <div class="sound-name">Hog Rider</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s6')">▶</button>
+        <div class="sound-name">Vine Boom</div>
+    </div>
+
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s7')">▶</button>
+        <div class="sound-name">Prowler</div>
+    </div>
+    <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s8')">▶</button>
+        <div class="sound-name">Pipe Clang</div>
+    </div>
+        <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s9')">▶</button>
+        <div class="sound-name">Cat Laugh</div>
+    </div>
+        <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s10')">▶</button>
+        <div class="sound-name">Goku Drip</div>
+    </div>
+        <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s11')">▶</button>
+        <div class="sound-name">Get Out</div>
+    </div>
+        <div class="sound-card">
+        <button class="play-btn" onclick="playSound('s12')">▶</button>
+        <div class="sound-name">Taco Bell</div>
+    </div>
+</div>
+</div>
+
+<div class="controls">
+    <button onclick="stopAll()">Stop All</button>
+</div>
+
+<!-- Audio -->
+<audio id="s1" src="sounds/rizz.mp3"></audio>
+<audio id="s2" src="sounds/nothingbeatsajet2holiday.mp3"></audio>
+<audio id="s3" src="sounds/fbiopenup.mp3"></audio>
+<audio id="s4" src="sounds/fahhhhhhhhhhhhhh.mp3"></audio>
+<audio id="s5" src="sounds/hogrider.mp3"></audio>
+<audio id="s6" src="sounds/vineboom.mp3"></audio>
+<audio id="s7" src="sounds/prowler.mp3"></audio>
+<audio id="s8" src="sounds/pipeclang.mp3"></audio>
+<audio id="s9" src="sounds/catlaugh.mp3"></audio>
+<audio id="s10" src="sounds/gokudrip.mp3"></audio>
+<audio id="s11" src="sounds/tuco-get-out.mp3"></audio>
+<audio id="s12" src="sounds/tacobell.mp3"></audio>
+
+<script>
+function playSound(id) {
+    const sound = document.getElementById(id);
+    sound.currentTime = 0;
+    sound.play();
+}
+
+function stopAll() {
+    document.querySelectorAll("audio").forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+}
+</script>
+
+</body>
+</html>
