@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameify - Your Gaming Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside id="sidebar">
+        <h1>Gameify</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#games">Games</a>
+                </li>
+                <li><a href="soundboard.html">Soundboard</a></li>
+                <li>
+  <a href="https://felipickle.github.io/picklemc/" target="_blank" rel="noopener noreferrer">
+    <img src="pics/minepic.png" alt="mcbuttonpic" width="200">
+  </a>
+</li>
+
+
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <button id="toggle-sidebar" aria-label="Toggle Sidebar">☰</button>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Gameify!</h2>
+            <p id="rotating-text">Discover and play amazing games right in your browser.</p>
+ <script>
+const texts = [
+  "Discover and play amazing games right in your browser.",
+  "Play instantly. No downloads.",
+  "Gameify: your gaming hub.",
+  "New games added every week."
+];
+
+let index = 0;
+const el = document.getElementById("rotating-text");
+
+setInterval(() => {
+  el.style.opacity = 0;
+  el.style.transform = "translateY(5px)";
+
+  setTimeout(() => {
+    index = (index + 1) % texts.length;
+    el.textContent = texts[index];
+    el.style.opacity = 1;
+    el.style.transform = "translateY(0)";
+  }, 600);
+}, 3000);
+</script>
+
+        </section>
+
+        <section id="games">
+            <h2>Featured Games</h2>
+            <div class="game-grid">
+                <div class="game-card">
+                    <img src="pics/drivemadpic.jpg" alt="Drive Mad">
+                    <h3>Drive Mad</h3>
+                    <a href="games/Drive Mad.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/unnamed.webp" alt="boxingrandom">
+                    <h3>Boxing Random</h3>
+                    <a href="games/Boxing Random (1).html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/hollowknightpic.jpg" alt="Hollow Knight">
+                    <h3>Hollow Knight</h3>
+                    <a href="games/Hollow Knight.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/snowriderpic.jpg" alt="Snow Rider 3D">
+                    <h3>Snow Rider 3D</h3>
+                    <a href="games/Snow Rider 3D.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/99nightspic.webp" alt="99Nights">
+                    <h3>99 Nights</h3>
+                    <a href="games/99Nights.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/ragdollarcherspic.jpg" alt="ragdollarchers">
+                    <h3>Ragdoll Archers</h3>
+                    <a href="games/ragdollarchers.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/pokemonemeraldpic.jpg" alt="pokemonemerald">
+                    <h3>Pokemon Emerald</h3>
+                    <a href="games/pokemonemerald.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/escaperoadpic.jpg" alt="escaperoad">
+                    <h3>Escape Road</h3>
+                    <a href="games/escaperoad.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/monkeymartpic.webp" alt="escaperoad">
+                    <h3>Monkey Mart</h3>
+                    <a href="games/monkeymart.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/karlsonpic.jpg" alt="karlson">
+                    <h3>Karlson</h3>
+                    <a href="games/Karlson.html" class="play-button">Play Now</a>
+                </div> 
+                <div class="game-card">
+                    <img src="pics/baseballbrospic.jpg" alt="baseballbros">
+                    <h3>Baseball Bros</h3>
+                    <a href="games/baseballbros.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/f1pic.jpg" alt="f1">
+                    <h3>Formula 1</h3>
+                    <a href="games/Super Star Car.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/paperiopic.jpg" alt="boomslingers">
+                    <h3><Paper class="io"></Paper></h3>
+                    <a href="games/Paperio2.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/bouncemasterspic.jpg" alt="bouncemasters">
+                    <h3>Bounce Masters</h3>
+                    <a href="games/bouncemasters.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/crossyroadpic.avif" alt="crossyroad">
+                    <h3>Crossy Road</h3>
+                    <a href="games/Crossy Road.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/geodashpic.png" alt="GeoDash">
+                    <h3>Geometry Dash</h3>
+                    <a href="games/Geometry Dash Lite.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/gladihopperspic.png" alt="gladihoppers">
+                    <h3>Gladihoppers</h3>
+                    <a href="games/Gladihoppers.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/jetpackjoyridepic.jpg" alt="jetpackjoyride">
+                    <h3>Jetpack Joyride</h3>
+                    <a href="games/Jetpack Joyride.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/bankrobberypic.jpg" alt="bankrobbery">
+                    <h3>Bank Robbery</h3>
+                    <a href="games/Bank Robbery 2.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/ragdollhitpic.avif" alt="ragdollhit">
+                    <h3>Ragdoll Hit</h3>
+                    <a href="games/Ragdoll Hit.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/slopepic.png" alt="slope">
+                    <h3>Slope</h3>
+                    <a href="games/Slope.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/spacewavespic.jpg" alt="spacewaves">
+                    <h3>Space Waves</h3>
+                    <a href="games/Space Waves.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/tagpic.jpg" alt="tag">
+                    <h3>Tag</h3>
+                    <a href="games/Tag.html" class="play-button">Play Now</a>
+                </div>
+                <div class="game-card">
+                    <img src="pics/timeshooter3pic.jpg" alt="timeshooter3">
+                    <h3>Timeshooter 3</h3>
+                    <a href="games/Time Shooter 3_ SWAT.html" class="play-button">Play Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Gameify</h2>
+            <p>Gameify is your go-to platform for browser-based games. a huge thanks to everyone on the team (shout out to dylan)</p>
+            <h3>Have Experience Coding? Join us today!</h3>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Gameify. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.querySelector('main');
+
+        toggleButton.addEventListener('click', () => {
+            sidebar.classList.toggle('hidden');
+            main.classList.toggle('full-width');
+        });
+    </script>
+</body>
+</html>
